@@ -1,0 +1,28 @@
+
+.cell-ref-profile-enabled {
+  filter: saturate(50%);
+}
+
+.btn-mods-ref-profile-enabled-enabled, .toggle-mods-ref-profile-enabled-enabled {
+  background-color: $brand-success;
+
+  &:hover, &:focus {
+    background-color: darken($brand-success, 10%);
+  }
+}
+
+.btn-mods-ref-profile-enabled-disabled, .toggle-mods-ref-profile-enabled-disabled {
+  background-color: $gray;
+
+  &:hover, &:focus {
+    background-color: darken($gray, 10%);
+  }
+}
+
+.btn-mods-ref-profile-enabled-uninstalled, .toggle-mods-ref-profile-enabled-uninstalled {
+  background-color: $brand-info;
+
+  &:hover, &:focus {
+    background-color: darken($brand-info, 10%);
+  }
+}

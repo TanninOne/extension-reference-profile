@@ -1,0 +1,40 @@
+{
+  "name": "ref-profile",
+  "version": "0.0.1",
+  "description": "Vortex extension to help visualize differences between two profiles",
+  "main": "./out/index.js",
+  "repository": "",
+  "scripts": {
+    "webpack": "node ./node_modules/webpack/bin/webpack --config webpack.config.js --display-error-details --progress --profile --color",
+    "bundle7z": "7z a -t7z ref-profile.7z .\\dist\\index.js .\\dist\\info.json",
+    "copy_scss": "copyfiles -f src/style.scss dist",
+    "build": "npm run webpack && npm run copy_scss && extractInfo"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "devDependencies": {
+    "@types/i18next": "^12.1.0",
+    "@types/node": "^12.0.10",
+    "@types/react": "^16.8.22",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
+    "7z-bin": "Nexus-Mods/7z-bin",
+    "bluebird": "^3.5.5",
+    "copyfiles": "^2.3.0",
+    "electron": "8.3.4",
+    "i18next": "^17.0.4",
+    "memoize-one": "^5.1.1",
+    "react": "^16.8.6",
+    "react-bootstrap": "^0.32.4",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.2",
+    "vortex-api": "Nexus-Mods/vortex-api",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4"
+  }
+}
