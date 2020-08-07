@@ -28,7 +28,7 @@ function modState(api: types.IExtensionApi, mod: IModWithState) {
         return 'N/A';
     }
 
-    return refProfile?.modState[mod.id]?.enabled
+    return refProfile?.modState?.[mod.id]?.enabled
         ? 'Enabled'
         : 'Disabled';
 }
@@ -59,7 +59,7 @@ function changeModEnabled(api: types.IExtensionApi, mod: IModWithState, value: a
             api.events.emit('start-install-download', mod.id);
         } else {
             // toggle between enabled/disabled
-            const currentState: boolean = refProfile.modState[mod.id]?.enabled === true;
+            const currentState: boolean = refProfile.modState?.[mod.id]?.enabled === true;
             api.store.dispatch(actions.setModEnabled(refProfile.id, mod.id, !currentState));
         }
     } else {
@@ -111,6 +111,9 @@ function makeOnSelectReferenceProfile(api: types.IExtensionApi) {
             selectors.gameProfiles(state, profile.gameId)
             .filter(prof => prof.id !== profile.id);
         api.showDialog('question', 'Select Reference Profile', {
+            text: 'Please select another profile that should serve as a reference to compare against. '
+                + 'Remember that you have to enable the "Reference Status" column on the mods table '
+                + 'to see anything.',
             choices: [
                 { id: '__none', text: 'None', value: refProfId === undefined },
             ].concat(

@@ -3,8 +3,8 @@
 
 
 "7z-bin@Nexus-Mods/7z-bin":
-  version "19.0.0-r4"
-  resolved "https://codeload.github.com/Nexus-Mods/7z-bin/tar.gz/7c58b7167627ba4ace32e2b0177b7824017490d1"
+  version "19.0.0-r5"
+  resolved "https://codeload.github.com/Nexus-Mods/7z-bin/tar.gz/de5bbe75a0035c5e848198e040c50233b61a06ba"
 
 "@babel/runtime-corejs2@^7.0.0":
   version "7.11.0"
