@@ -6,7 +6,7 @@ type IModWithState = types.IMod & types.IProfileMod;
 
 const referenceProfile = memoize((state: types.IState): types.IProfile => {
     const profile = selectors.activeProfile(state);
-    const refProfId = profile.features?.reference_profile;
+    const refProfId = profile?.features?.reference_profile;
     if (refProfId === undefined) {
         return undefined;
     }

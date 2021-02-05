@@ -6,11 +6,11 @@
   "repository": "",
   "scripts": {
     "webpack": "node ./node_modules/webpack/bin/webpack --config webpack.config.js --display-error-details --progress --profile --color",
-    "bundle7z": "7z a -t7z ref-profile.7z .\\dist\\index.js .\\dist\\info.json .\\dist\\style.scss",
-    "copy_scss": "del ref-profile.7z && copyfiles -f src/style.scss dist",
-    "build": "npm run webpack && npm run copy_scss && extractInfo"
+    "bundle7z": "7z a -t7z compare-profiles.7z .\\dist\\index.js .\\dist\\info.json .\\dist\\style.scss",
+    "copy_scss": "copyfiles -f src/style.scss dist",
+    "build": "del compare-profiles.7z && npm run webpack && npm run copy_scss && extractInfo"
   },
-  "author": "",
+  "author": "Tannin",
   "license": "GPL-3.0",
   "babel": {
     "presets": [
