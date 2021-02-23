@@ -1,6 +1,6 @@
 {
   "name": "compare-profiles",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vortex extension to help visualize differences between two profiles",
   "main": "./out/index.js",
   "repository": "",

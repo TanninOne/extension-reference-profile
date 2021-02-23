@@ -153,7 +153,8 @@ function init(context: types.IExtensionContext) {
             if ((refProfile !== undefined)
                 && (prev[refProfile.id].modState !== cur[refProfile.id].modState)) {
                 onChange?.();
-            } else if (prev[profile.id].features !== cur[profile.id].features) {
+            } else if ((profile !== undefined)
+                && (prev[profile.id]?.features !== cur[profile.id]?.features)) {
                 onChange?.();
             }
         });
