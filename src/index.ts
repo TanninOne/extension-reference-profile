@@ -94,10 +94,10 @@ function makeStatusAttribute(api: types.IExtensionApi,
         isSortable: false,
         isGroupable: true,
         filter: new OptionsFilter([
-            { value: true, label: 'Enabled' },
-            { value: false, label: 'Disabled' },
-            { value: undefined, label: 'Uninstalled' },
-        ], true),
+            { value: 'Enabled', label: 'Enabled' },
+            { value: 'Disabled', label: 'Disabled' },
+            { value: 'Uninstalled', label: 'Uninstalled' },
+        ], true, false),
         externalData: (onChange: () => void) => { setOnChange(onChange) },
     } as any;
 }
