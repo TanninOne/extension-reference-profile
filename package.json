@@ -5,7 +5,7 @@
   "main": "./out/index.js",
   "repository": "",
   "scripts": {
-    "webpack": "node ./node_modules/webpack/bin/webpack --config webpack.config.js --display-error-details --progress --profile --color",
+    "webpack": "node ./node_modules/webpack/bin/webpack --config webpack.config.js --progress --profile --color",
     "bundle7z": "7z a -t7z compare-profiles.7z .\\dist\\index.js .\\dist\\info.json .\\dist\\style.scss",
     "copy_scss": "copyfiles -f src/style.scss dist",
     "build": "del compare-profiles.7z && npm run webpack && npm run copy_scss && extractInfo"
@@ -26,15 +26,15 @@
     "@types/redux-thunk": "^2.1.0",
     "bluebird": "^3.5.5",
     "copyfiles": "^2.3.0",
-    "electron": "^18.3.7",
+    "electron": "^22.0.0",
     "i18next": "^17.0.4",
     "memoize-one": "^5.1.1",
     "react": "^16.8.6",
     "react-bootstrap": "^0.32.4",
-    "ts-loader": "^6.0.4",
+    "ts-loader": "^9.4.2",
     "typescript": "^3.5.2",
     "vortex-api": "Nexus-Mods/vortex-api",
-    "webpack": "^4.35.0",
-    "webpack-cli": "^3.3.4"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   }
 }
